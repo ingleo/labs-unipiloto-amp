@@ -7,10 +7,14 @@ body {
 h1 {
  color: #2F4F4F;
  font: fantasy;
+ border-style: dotted;
 }
 
 section {
 	 background-color: 	#B0E0E6;
+	 border-style: double;
+	 border-color: #6495ED;
+	 border-radius: 5px;
 }
 
 .inline-box{
