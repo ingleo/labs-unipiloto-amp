@@ -1,16 +1,25 @@
 /* myStyle.css */
 body {
- background-color: #333300;
- color: #FFFFFF;
+ background-color: 	#E0FFFF;
+ color: #4169E1;
 }
+
 h1 {
- color: #FFFF33;
+ color: #2F4F4F;
  text-align: center;
- font: italic 200% fantasy;
+ font: fantasy;
 }
-p {
- background-color: #FFFF33;
- color: #333300;
- text-align: right;
- border: 3px groove #FFFF33;
+
+h2 {
+ color: #1E90FF;
+ text-align: center;
+ font: fantasy;
+}
+
+section {
+	 background-color: 	#B0E0E6;
+}
+
+.inline-box{
+	display: inline-block;
 }
