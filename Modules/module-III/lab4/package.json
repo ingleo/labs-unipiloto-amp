@@ -1,0 +1,23 @@
+{
+  "name": "laboratorio-4",
+  "version": "1.0.0",
+  "description": "laboratorio numero cuatro",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejo8591/unipiloto-apm-5.git"
+  },
+  "keywords": [
+    "lab4",
+    "diplomado"
+  ],
+  "author": "Leonardo Gonzalez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alejo8591/unipiloto-apm-5/issues"
+  },
+  "homepage": "https://github.com/alejo8591/unipiloto-apm-5#readme"
+}

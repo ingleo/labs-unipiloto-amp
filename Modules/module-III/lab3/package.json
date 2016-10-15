@@ -1,0 +1,19 @@
+{
+  "name": "laboratorio-3",
+  "version": "0.1.0",
+  "description": "lab3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ingleo/labs-unipiloto-amp/tree/master/Modules/module-III/lab1"
+  },
+  "keywords": [
+    "diplomado",
+    "laboratorio"
+  ],
+  "author": "Leonardo Gonzalez",
+  "license": "MIT"
+}
