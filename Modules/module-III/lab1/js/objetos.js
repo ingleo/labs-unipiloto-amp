@@ -1,8 +1,9 @@
 /*
 Se crea el objeto Diplomado
 */
+console.log('inicio de ejercicio 4');
 
-alert('Comienzo ejercicio 4 !!!');
+//alert('Comienzo ejercicio 4 !!!');
 
 
 function Diplomado(nombre, modalidad, docente){
@@ -23,20 +24,26 @@ Diplomado.prototype = {
 	}
 }
 
+/*
 var nombreAux = prompt("Ingrese nombre de diplomado", "");
 var modalidadAux = prompt("Ingrese modalidad de diplomado", "");
 var docenteAux = prompt("Ingrese docente de diplomado", "");
+*/
 
 
-var diplomadoaObj = new Diplomado(nombreAux, modalidadAux, docenteAux);
+//var diplomadoaObj = new Diplomado(nombreAux, modalidadAux, docenteAux);
 
+/*
 diplomadoaObj.setNombre(nombreAux);
 diplomadoaObj.setModalidad(modalidadAux);
 diplomadoaObj.setDocente(docenteAux);
+*/
 
+/*
 alert('El diplomado es: '+ diplomadoaObj.nombre + '\n' + 
 	'La modalidad es: ' + diplomadoaObj.modalidad + '\n' + 
 	'El docente es: ' + diplomadoaObj.docente);
+*/
 
 console.log('fin de ejercicio 4');
 
