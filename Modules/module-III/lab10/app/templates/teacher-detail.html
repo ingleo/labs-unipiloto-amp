@@ -1,0 +1,23 @@
+<div *ngIf="teacher">
+    <label for=""> Id: </label>
+    <input type="text" [(ngModel)]="teacher.id" placeholder="Id">
+    <br/>
+    <label for=""> Name: </label>
+    <input type="text" [(ngModel)]="teacher.name" placeholder="Name">
+    <br/>
+    <label for=""> Classrooms: </label>
+    <!--<input type="text" [(ngModel)]="teacher.classrooms" placeholder="Classrooms">-->
+    <ul>
+		<li *ngFor="let classroom of teacher.classrooms">
+            {{classroom}}
+		</li>
+	</ul>
+    <br/>
+    <label for=""> Grades: </label>
+    <!--<input type="text" [(ngModel)]="teacher.grades" placeholder="Grades">-->
+    <ul>
+		<li *ngFor="let grade of teacher.grades">
+            {{grade}}
+		</li>
+	</ul>
+</div>

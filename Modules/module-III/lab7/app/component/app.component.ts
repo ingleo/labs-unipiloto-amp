@@ -1,20 +1,6 @@
 import { Component } from '@angular/core';
-
- export class Product {
- 	id: number;
- 	name: string;
- 	description: string;
- 	type: string;
- 	price: number;
- 	quantity: number;
- }
-
- export class User {
-   id : number;
-   name : string;
-   address: string;
-   phone : number;
- }
+import { Product } from '../model/product';
+import { User} from '../model/User';
 
 @Component({
   selector: 'my-app',

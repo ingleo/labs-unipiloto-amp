@@ -9,24 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var app_component_1 = require('./component/app.component');
-var forms_1 = require('@angular/forms');
-var AppModule = (function () {
-    function AppModule() {
+var teacher_1 = require('../model/teacher');
+var TeacherDetailComponent = (function () {
+    function TeacherDetailComponent() {
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [
-                platform_browser_1.BrowserModule,
-                forms_1.FormsModule
-            ],
-            declarations: [app_component_1.AppComponent],
-            bootstrap: [app_component_1.AppComponent]
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', teacher_1.Teacher)
+    ], TeacherDetailComponent.prototype, "teacher", void 0);
+    TeacherDetailComponent = __decorate([
+        core_1.Component({
+            selector: 'teacher-detail',
+            templateUrl: 'app/templates/teacher-detail.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], TeacherDetailComponent);
+    return TeacherDetailComponent;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.TeacherDetailComponent = TeacherDetailComponent;
+//# sourceMappingURL=teacher-detail.component.js.map

@@ -1,0 +1,16 @@
+<div *ngIf="product">
+    <label for=""> Name: </label>
+    <input type="text" [(ngModel)]="product.name" placeholder="Name">
+    <br/>
+    <label for=""> Description: </label>
+    <input type="text" [(ngModel)]="product.description" placeholder="Description">
+    <br/>
+    <label for=""> Type: </label>
+    <input type="text" [(ngModel)]="product.type" placeholder="Type">
+    <br/>
+    <label for=""> Price: </label>
+    <input type="text" [(ngModel)]="product.price" placeholder="Price">
+    <br/>
+    <label for=""> Quantity: </label>
+    <input type="text" [(ngModel)]="product.quantity" placeholder="Quantity">
+</div>

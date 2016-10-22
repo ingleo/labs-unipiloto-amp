@@ -1,0 +1,43 @@
+<h1>{{product.id}}</h1>
+<h2>{{product.name}}</h2>
+<h2>{{product.description}}</h2>
+<h2>{{product.type}}</h2>
+<h2>{{product.price}}</h2>
+<h2>{{product.quantity}}</h2>
+<br />
+<h2>{{user.id}}</h2>
+<h2>{{user.name}}</h2>
+<h2>{{user.address}}</h2>
+<h2>{{user.phone}}</h2>
+
+<br/>
+
+<ul>
+    <li *ngFor="let user of users">
+        <span>{{user.id}}</span> {{user.name | uppercase }} 
+    </li>
+</ul>
+
+<br/>
+
+<div>
+    <label for=""> Name: </label>
+    <input type="text" [(ngModel)]="user.name" placeholder="Name">
+    <br/>
+    <label for=""> Address: </label>
+    <input type="text" [(ngModel)]="user.address" placeholder="Address">
+    <br/>
+    <label for=""> Phone: </label>
+    <input type="text" [(ngModel)]="user.phone" placeholder="Phone">
+</div>
+
+
+<h1>{{ title }}</h1>
+<ul>
+    <li *ngFor="let product of products" (click)="onSelect(product)">
+        <span>{{product.id}}</span> {{product.name | uppercase }} 
+    </li>
+</ul>
+
+<!--se usa ngIf para que cargue el objeto seleccionado -->
+<product-detail [product]="selected"></product-detail>
