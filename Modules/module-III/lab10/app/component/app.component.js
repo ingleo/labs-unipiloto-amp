@@ -47,7 +47,8 @@ var AppComponent = (function () {
 }());
 exports.AppComponent = AppComponent;
 //Creation of student array
-var STUDENTS = [
+/*
+const STUDENTS: Student[] = [
     {
         id: 1,
         name: "Carlos",
@@ -67,25 +68,27 @@ var STUDENTS = [
         grade: 9
     }
 ];
+
 //Creation of teacher array
-var TEACHERS = [
+const TEACHERS: Teacher[] = [
     {
         id: 1,
         name: "Alejandro",
-        classrooms: ["1101", "1001", "901"],
-        grades: [11, 10, 9]
+        classrooms: ["1101","1001","901"],
+        grades: [11,10,9]
     },
     {
         id: 2,
         name: "Andres",
-        classrooms: ["1101", "1001", "1002"],
-        grades: [11, 10]
+        classrooms: ["1101","1001","1002"],
+        grades: [11,10]
     },
     {
         id: 3,
         name: "Fernando",
-        classrooms: ["901", "901", "903"],
-        grades: [9, 10]
+        classrooms: ["901","901","903"],
+        grades: [9,10]
     }
 ];
+*/ 
 //# sourceMappingURL=app.component.js.map

@@ -12,9 +12,7 @@ import { TeacherService } from '../service/teacher.service';
 
 export class AppComponent implements OnInit{
 
-    constructor(private studentService: StudentService, private teacherService: TeacherService){}
-
-    //Title variable
+     //Title variable
     title: string = "Colegio";
     title_student = "Estudiantes";
     title_teacher = "Profesores";
@@ -22,6 +20,8 @@ export class AppComponent implements OnInit{
     //Assign arrays to variables 
     students : Student[];
     teachers : Teacher[];
+
+    constructor(private studentService: StudentService, private teacherService: TeacherService){}
 
     ngOnInit(){
 		this.studentService.getStudents()
@@ -46,6 +46,7 @@ export class AppComponent implements OnInit{
 }
 
 //Creation of student array
+/*
 const STUDENTS: Student[] = [
     {
         id: 1,
@@ -88,3 +89,4 @@ const TEACHERS: Teacher[] = [
         grades: [9,10]
     }
 ];
+*/

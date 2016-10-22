@@ -14,7 +14,7 @@ exports.TEACHERS = [
     },
     {
         id: 3,
-        name: "Fernando1",
+        name: "Fernando",
         classrooms: ["901", "901", "903"],
         grades: [9, 10]
     }
