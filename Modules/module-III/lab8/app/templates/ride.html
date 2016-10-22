@@ -1,18 +1,26 @@
+<h1>{{title}} </h1>
 
 <div>
-    <label for=""> Festive: </label>
+    <label for=""> Festive: $ </label>
     <input type="text" [(ngModel)]="ride.festive" placeholder="Festive">
     <br/>
-    <label for=""> Airport: </label>
+    <label for=""> Airport: $</label>
     <input type="text" [(ngModel)]="ride.airport" placeholder="Airport">
     <br/>
-    <label for=""> app/pip: </label>
+    <label for=""> app/pip: $</label>
     <input type="text" [(ngModel)]="ride.app_pip" placeholder="app/pip">
     <br/>
     <label for=""> units: </label>
-    <input type="text" [(ngModel)]="ride.units" placeholder="Units">
+    <input type="text" [(ngModel)]="ride.units" placeholder="Units" (blur)="getTotal(ride)">
     <br/>
-    <label for=""> default: </label>
-    <input type="text" [(ngModel)]="ride.default" placeholder="Default">
-
+    <label for=""> default: $</label>
+    <input type="text" [(ngModel)]="ride.default" placeholder="Default" readonly>
+    <br/>
+    
+    <!--
+        <button type="button" (click)="getTotal(ride)"> Calcular</button>
+    -->
+    <h3>Total es: ${{total}} </h3>
+    
 </div>
+

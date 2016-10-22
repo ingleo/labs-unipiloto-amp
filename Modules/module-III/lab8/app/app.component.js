@@ -23,12 +23,24 @@ var AppComponent = (function () {
             app_pip: 700,
             units: 50,
             default: 4100,
-            total: 0
         };
+        this.total = this.getTotal(this.ride);
         this.title = "Mi viaje";
     }
-    AppComponent.prototype.onSelect = function (ride) {
-        this.selected = ride;
+    AppComponent.prototype.getTotal = function (ride) {
+        var unitCost;
+        var minUnits = 50;
+        var defaultValue = 4100;
+        if (ride.units <= minUnits) {
+            unitCost = ride.default;
+        }
+        else {
+            unitCost = (ride.units * defaultValue) / minUnits;
+        }
+        this.ride.default = unitCost;
+        this.total = Number(ride.festive) + Number(ride.airport) + Number(ride.app_pip) + unitCost;
+        console.log('XXXXX ' + this.total);
+        return this.total;
     };
     AppComponent = __decorate([
         core_1.Component({

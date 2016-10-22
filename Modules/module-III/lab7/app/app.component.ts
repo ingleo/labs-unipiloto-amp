@@ -10,8 +10,7 @@ import { Component } from '@angular/core';
  }
 
  export class User {
-
-	 id : number;
+   id : number;
    name : string;
    address: string;
    phone : number;
@@ -34,6 +33,7 @@ import { Component } from '@angular/core';
 	templateUrl : 'app/templates/product.html'
 
 })
+
 export class AppComponent {
 	product: Product = {
 		id: 1,

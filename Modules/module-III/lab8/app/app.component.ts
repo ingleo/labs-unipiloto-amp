@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
     app_pip : number;
     units : number;
     default : number;
-    total : number;
  }
 
 @Component({
@@ -21,14 +20,28 @@ export class AppComponent {
         app_pip : 700,
         units : 50,
         default : 4100,
-        total : 0
 	}
 
-    selected: Ride;
+  total : number = this.getTotal(this.ride);
 
-    onSelect(ride: Ride) {
-		this.selected = ride;      
+
+  getTotal(ride: Ride) : number{
+    var unitCost : number;
+    var minUnits : number = 50;
+    var defaultValue : number = 4100;
+
+    if(ride.units <= minUnits){
+      unitCost = ride.default;
+    }else{
+      unitCost = (ride.units * defaultValue) / minUnits;
+    }
+
+    this.ride.default = unitCost;
+		this.total = Number(ride.festive) + Number(ride.airport) + Number(ride.app_pip) + unitCost;
+    console.log('XXXXX ' + this.total);
+    return this.total;
 	}
+
 
 	title: string = "Mi viaje";
 
