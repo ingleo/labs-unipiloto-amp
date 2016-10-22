@@ -27,13 +27,13 @@ export class AppComponent {
 
   getTotal(ride: Ride) : number{
     var unitCost : number;
-    var minUnits : number = 50;
-    var defaultValue : number = 4100;
+    const MIN_UNITS : number = 50;
+    const DEF_VALUE : number = 4100;
 
-    if(ride.units <= minUnits){
-      unitCost = ride.default;
+    if(ride.units <= MIN_UNITS){
+      unitCost = DEF_VALUE;
     }else{
-      unitCost = (ride.units * defaultValue) / minUnits;
+      unitCost = (ride.units * DEF_VALUE) / MIN_UNITS;
     }
 
     this.ride.default = unitCost;
@@ -41,7 +41,6 @@ export class AppComponent {
     console.log('XXXXX ' + this.total);
     return this.total;
 	}
-
 
 	title: string = "Mi viaje";
 

@@ -29,13 +29,13 @@ var AppComponent = (function () {
     }
     AppComponent.prototype.getTotal = function (ride) {
         var unitCost;
-        var minUnits = 50;
-        var defaultValue = 4100;
-        if (ride.units <= minUnits) {
-            unitCost = ride.default;
+        var MIN_UNITS = 50;
+        var DEF_VALUE = 4100;
+        if (ride.units <= MIN_UNITS) {
+            unitCost = DEF_VALUE;
         }
         else {
-            unitCost = (ride.units * defaultValue) / minUnits;
+            unitCost = (ride.units * DEF_VALUE) / MIN_UNITS;
         }
         this.ride.default = unitCost;
         this.total = Number(ride.festive) + Number(ride.airport) + Number(ride.app_pip) + unitCost;
