@@ -71,11 +71,8 @@ class Teacher implements Person{
 var student = new Student();
 var teacher = new Teacher();
 
-
 student.setAge(55);
-
 teacher.setAge(65);
-
 
 console.log(student.getAge());
 console.log(teacher.getAge());
