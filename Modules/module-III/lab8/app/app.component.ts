@@ -1,8 +1,5 @@
-<<<<<<< Updated upstream
 import { Component } from '@angular/core'; 
 import { Ride } from './model/ride';
-=======
-import { Component } from '@angular/core';
 
 export class Ride {
   festive: number;
@@ -11,7 +8,6 @@ export class Ride {
   units: number;
   default: number;
 }
->>>>>>> Stashed changes
 
 @Component({
   selector: 'my-app',
@@ -27,10 +23,7 @@ export class AppComponent {
     default: 4100,
   }
 
-<<<<<<< Updated upstream
   title: string = "Mi viaje";
-=======
->>>>>>> Stashed changes
   total: number = this.getTotal(this.ride);
 
 
@@ -47,15 +40,13 @@ export class AppComponent {
 
     this.ride.default = unitCost;
     this.total = Number(ride.festive) + Number(ride.airport) + Number(ride.app_pip) + unitCost;
-<<<<<<< Updated upstream
+
     return this.total;
-  }
-=======
+  
     console.log('XXXXX ' + this.total);
     return this.total;
   }
 
   title: string = "Mi viaje";
 
->>>>>>> Stashed changes
 }
