@@ -1,14 +1,6 @@
 import { Component } from '@angular/core'; 
 import { Ride } from './model/ride';
 
-export class Ride {
-  festive: number;
-  airport: number;
-  app_pip: number;
-  units: number;
-  default: number;
-}
-
 @Component({
   selector: 'my-app',
   templateUrl: 'app/templates/ride.html'
@@ -42,11 +34,5 @@ export class AppComponent {
     this.total = Number(ride.festive) + Number(ride.airport) + Number(ride.app_pip) + unitCost;
 
     return this.total;
-  
-    console.log('XXXXX ' + this.total);
-    return this.total;
   }
-
-  title: string = "Mi viaje";
-
 }

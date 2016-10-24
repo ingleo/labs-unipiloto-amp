@@ -9,12 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var Ride = (function () {
-    function Ride() {
-    }
-    return Ride;
-}());
-exports.Ride = Ride;
 var AppComponent = (function () {
     function AppComponent() {
         this.ride = {
@@ -26,7 +20,6 @@ var AppComponent = (function () {
         };
         this.title = "Mi viaje";
         this.total = this.getTotal(this.ride);
-        this.title = "Mi viaje";
     }
     AppComponent.prototype.getTotal = function (ride) {
         var unitCost;
@@ -40,8 +33,6 @@ var AppComponent = (function () {
         }
         this.ride.default = unitCost;
         this.total = Number(ride.festive) + Number(ride.airport) + Number(ride.app_pip) + unitCost;
-        return this.total;
-        console.log('XXXXX ' + this.total);
         return this.total;
     };
     AppComponent = __decorate([
