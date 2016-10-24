@@ -1,7 +1,6 @@
 /*
 Ejercicio para revisar variables y comentarios en javascript
 */
-
 //variable numero uno
 var numero1 = prompt("Ingrese primer número", "");
 

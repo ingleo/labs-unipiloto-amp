@@ -6,11 +6,11 @@ alert('Comienzo ejercicio 2 !!!')
 var frameworks = ["ionic", "angular", "nodejs", "npm"];
 var seleccionado = prompt("Ingrese número de cero a tres", "");
 
-if(seleccionado > 3){
+if (seleccionado > 3) {
 	alert('el numero es mayor a 3');
 }
-else{
-	var auxSeleccion = frameworks[Number(seleccionado)];	
+else {
+	var auxSeleccion = frameworks[Number(seleccionado)];
 	alert('Has seleccionado ' + auxSeleccion);
 }
 
@@ -22,5 +22,5 @@ alert('Se ejecuta función pop sobre array ');
 
 frameworks.pop();
 
-alert('El array ahora es: (' + frameworks + ')'); 
+alert('El array ahora es: (' + frameworks + ')');
 alert('Fin ejercicio 2 !!!');
