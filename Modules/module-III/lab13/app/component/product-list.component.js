@@ -17,20 +17,20 @@ var ProductListComponent = (function () {
         this.productService = productService;
         this.title = "Mis Productos";
     }
-    ProductListComponent.prototype.ngOnInit = function () {
-        this.getProducts();
-    };
     ProductListComponent.prototype.getProducts = function () {
         var _this = this;
         this.productService.getProducts()
             .then(function (products) { return _this.products = products; })
             .catch(function (error) { return console.log(error); });
     };
+    ProductListComponent.prototype.ngOnInit = function () {
+        this.getProducts();
+    };
     ProductListComponent.prototype.onSelect = function (product) {
-        this.selected_product = product;
+        this.selected = product;
     };
     ProductListComponent.prototype.gotoDetail = function () {
-        this.router.navigate(['product/detail/', this.selected_product.id]);
+        this.router.navigate(['product/detail/', this.selected.id]);
     };
     ProductListComponent = __decorate([
         core_1.Component({

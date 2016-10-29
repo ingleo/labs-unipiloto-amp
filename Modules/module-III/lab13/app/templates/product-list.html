@@ -5,4 +5,9 @@
 	</li>
 </ul>
 
-<!--<product-detail [product]="selected_product"></product-detail>-->
+<div *ngIf="selected">
+    <h2>
+        {{selected.name | uppercase}} is my Product
+    </h2>
+    <button (click)="gotoDetail()">View Details</button>
+</div>

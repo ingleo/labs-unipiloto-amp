@@ -9,20 +9,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var product_1 = require('../model/product');
+var product_service_1 = require('../service/product.service');
+var router_1 = require("@angular/router");
 var ProductDetailComponent = (function () {
-    function ProductDetailComponent() {
+    function ProductDetailComponent(productService, route) {
+        this.productService = productService;
+        this.route = route;
     }
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', product_1.Product)
-    ], ProductDetailComponent.prototype, "product", void 0);
+    ProductDetailComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.params.forEach(function (params) {
+            var id = +params['id'];
+            _this.productService.getProduct(id)
+                .then(function (product) { return _this.product = product; });
+        });
+    };
     ProductDetailComponent = __decorate([
         core_1.Component({
             selector: 'product-detail',
-            templateUrl: 'app/templates/product-detail.html'
+            templateUrl: 'app/templates/product-detail.html',
+            providers: [product_service_1.ProductService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [product_service_1.ProductService, router_1.ActivatedRoute])
     ], ProductDetailComponent);
     return ProductDetailComponent;
 }());

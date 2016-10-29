@@ -13,13 +13,9 @@ export class ProductListComponent implements OnInit {
 
 	title: string = "Mis Productos";
 	products: Product[];
-	selected_product: Product;
+	selected: Product;
 
 	constructor(private router: Router, private productService: ProductService) { }
-
-	ngOnInit(): void {
-		this.getProducts();
-	}
 
 	getProducts() {
 		this.productService.getProducts()
@@ -27,11 +23,15 @@ export class ProductListComponent implements OnInit {
 			.catch(error => console.log(error));
 	}
 
+	ngOnInit(): void {
+		this.getProducts();
+	}
+
 	onSelect(product: Product) {
-		this.selected_product = product;
+		this.selected = product;
 	}
 
 	gotoDetail(): void {
-		this.router.navigate(['product/detail/', this.selected_product.id]);
+		this.router.navigate(['product/detail/', this.selected.id]);
 	}
 }

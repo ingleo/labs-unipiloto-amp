@@ -25,7 +25,7 @@ var routes = [
     { path: 'page-two', component: page_two_component_1.PageTwoComponent },
     { path: 'product-list', component: product_list_component_1.ProductListComponent },
     { path: 'user-list', component: user_list_component_1.UserListComponent },
-    { path: 'product-detail', component: product_detail_component_1.ProductDetailComponent }
+    { path: 'product/detail/:id', component: product_detail_component_1.ProductDetailComponent }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
