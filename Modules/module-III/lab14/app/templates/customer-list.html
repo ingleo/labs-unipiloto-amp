@@ -1,0 +1,12 @@
+<ul>
+	<li *ngFor="let customer of customers" (click)="onSelect(customer)">
+		<span>{{customer.id}}</span> {{customer.name | uppercase }}
+	</li>
+</ul>
+
+<hr/>
+
+<div *ngIf="selected">
+    <h2> {{selected.name | uppercase}} is selected </h2>
+    <button (click)="gotoInvoices()">View invoices</button> 
+</div>
