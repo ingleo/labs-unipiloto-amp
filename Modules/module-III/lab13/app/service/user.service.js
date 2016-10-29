@@ -16,6 +16,9 @@ var UserService = (function () {
     UserService.prototype.getUsers = function () {
         return Promise.resolve(user_mock_1.USERS);
     };
+    UserService.prototype.getUser = function (id) {
+        return this.getUsers().then(function (users) { return users.find(function (user) { return user.id === id; }); });
+    };
     UserService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])

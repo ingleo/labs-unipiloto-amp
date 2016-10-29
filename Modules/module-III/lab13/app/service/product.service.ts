@@ -9,7 +9,7 @@ export class ProductService{
     }
 
     getProduct(id: number): Promise<Product>{
-        return this.getProducts().then(products => products.find(product => product.id === id))
+        return this.getProducts().then(products => products.find(product => product.id === id));
 
     }
 }
