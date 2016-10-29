@@ -9,21 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var product_mock_1 = require("../mock/product-mock");
-var ProductService = (function () {
-    function ProductService() {
+var user_mock_1 = require("../mock/user-mock");
+var UserService = (function () {
+    function UserService() {
     }
-    ProductService.prototype.getProducts = function () {
-        return Promise.resolve(product_mock_1.PRODUCTS);
+    UserService.prototype.getUsers = function () {
+        return Promise.resolve(user_mock_1.USERS);
     };
-    ProductService.prototype.getProduct = function (id) {
-        return this.getProducts().then(function (products) { return products.find(function (product) { return product.id === id; }); });
-    };
-    ProductService = __decorate([
+    UserService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], ProductService);
-    return ProductService;
+    ], UserService);
+    return UserService;
 }());
-exports.ProductService = ProductService;
-//# sourceMappingURL=product.service.js.map
+exports.UserService = UserService;
+//# sourceMappingURL=user.service.js.map

@@ -8,22 +8,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var product_mock_1 = require("../mock/product-mock");
-var ProductService = (function () {
-    function ProductService() {
+var core_1 = require('@angular/core');
+var product_1 = require('../model/product');
+var ProductDetailComponent = (function () {
+    function ProductDetailComponent() {
     }
-    ProductService.prototype.getProducts = function () {
-        return Promise.resolve(product_mock_1.PRODUCTS);
-    };
-    ProductService.prototype.getProduct = function (id) {
-        return this.getProducts().then(function (products) { return products.find(function (product) { return product.id === id; }); });
-    };
-    ProductService = __decorate([
-        core_1.Injectable(), 
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', product_1.Product)
+    ], ProductDetailComponent.prototype, "product", void 0);
+    ProductDetailComponent = __decorate([
+        core_1.Component({
+            selector: 'product-detail',
+            templateUrl: 'app/templates/product-detail.html'
+        }), 
         __metadata('design:paramtypes', [])
-    ], ProductService);
-    return ProductService;
+    ], ProductDetailComponent);
+    return ProductDetailComponent;
 }());
-exports.ProductService = ProductService;
-//# sourceMappingURL=product.service.js.map
+exports.ProductDetailComponent = ProductDetailComponent;
+//# sourceMappingURL=product-detail.component.js.map

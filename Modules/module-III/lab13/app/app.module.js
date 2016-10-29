@@ -20,6 +20,7 @@ var home_component_1 = require("./component/home.component");
 var common_1 = require("@angular/common");
 var product_list_component_1 = require("./component/product-list.component");
 var user_list_component_1 = require("./component/user-list.component");
+var product_detail_component_1 = require("./component/product-detail.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -37,7 +38,8 @@ var AppModule = (function () {
                 home_component_1.HomeComponent,
                 about_component_1.AboutComponent,
                 product_list_component_1.ProductListComponent,
-                user_list_component_1.UserListComponent
+                user_list_component_1.UserListComponent,
+                product_detail_component_1.ProductDetailComponent
             ],
             providers: [
                 {

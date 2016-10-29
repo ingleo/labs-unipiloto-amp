@@ -4,7 +4,7 @@ export const USERS: User[] = [
         id : 1,
         name : "Carlos",
         address: "Calle 123",
-        phone : 1234567;
+        phone : 1234567
     },
     {
         id : 2,

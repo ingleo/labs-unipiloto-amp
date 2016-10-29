@@ -16,6 +16,7 @@ var about_component_1 = require("../component/about.component");
 var page_one_component_1 = require("../component/page-one.component");
 var product_list_component_1 = require("../component/product-list.component");
 var user_list_component_1 = require("../component/user-list.component");
+var product_detail_component_1 = require("../component/product-detail.component");
 var routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: home_component_1.HomeComponent },
@@ -23,7 +24,8 @@ var routes = [
     { path: 'page-one', component: page_one_component_1.PageOneComponent },
     { path: 'page-two', component: page_two_component_1.PageTwoComponent },
     { path: 'product-list', component: product_list_component_1.ProductListComponent },
-    { path: 'user-list', component: user_list_component_1.UserListComponent }
+    { path: 'user-list', component: user_list_component_1.UserListComponent },
+    { path: 'product-detail', component: product_detail_component_1.ProductDetailComponent }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {

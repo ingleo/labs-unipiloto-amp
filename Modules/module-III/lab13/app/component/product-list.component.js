@@ -9,18 +9,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var product_mock_1 = require("../mock/product-mock");
+var product_service_1 = require("../service/product.service");
+var router_1 = require("@angular/router");
 var ProductListComponent = (function () {
-    function ProductListComponent() {
+    function ProductListComponent(router, productService) {
+        this.router = router;
+        this.productService = productService;
         this.title = "Mis Productos";
-        this.products = product_mock_1.PRODUCTS;
     }
+    ProductListComponent.prototype.ngOnInit = function () {
+        this.getProducts();
+    };
+    ProductListComponent.prototype.getProducts = function () {
+        var _this = this;
+        this.productService.getProducts()
+            .then(function (products) { return _this.products = products; })
+            .catch(function (error) { return console.log(error); });
+    };
+    ProductListComponent.prototype.onSelect = function (product) {
+        this.selected_product = product;
+    };
+    ProductListComponent.prototype.gotoDetail = function () {
+        this.router.navigate(['product/detail/', this.selected_product.id]);
+    };
     ProductListComponent = __decorate([
         core_1.Component({
             selector: 'product-list',
-            templateUrl: 'app/templates/product-list.html'
+            templateUrl: 'app/templates/product-list.html',
+            providers: [product_service_1.ProductService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router, product_service_1.ProductService])
     ], ProductListComponent);
     return ProductListComponent;
 }());
