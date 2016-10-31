@@ -18,4 +18,11 @@ Los laboratorios que se encuentran en el repositorio estan organizados de la sig
 - lab6: Proyecto básico de Angular2
 - lab7: Proyecto Angular2 usando models, templates, binding, directivas y eventos
 - lab8: Proyecto Angular2 para calcular el costo de un viaje en taxi; uso de métodos en componente.
-- lab9: 
+- lab9: Proyecto Angular2 usando varios components y enviando un parámetro de entrada de uno a otro.
+- lab10: Proyecto Angular2 usando inyección de servicios dentro de los components para cargar información de mocks.
+- lab11: Proyecto Angular2 usando inyección de servicios dentro de los components para cargar información de mocks.
+- lab12: Proyecto Angular2 con routing básico
+- lab13: Proyecto Angular2 con uso de servicios y routing con envío de parámetros en la URL
+- lab14: Proyecto Angular2 con uso de servicios y routing con envío de parámetros en la URL
+- lab15: Proyecto Angular2 usando in-memory-web-api para simular el consumo de servicios via http
+

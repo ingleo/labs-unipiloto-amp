@@ -46,49 +46,4 @@ var AppComponent = (function () {
     return AppComponent;
 }());
 exports.AppComponent = AppComponent;
-//Creation of student array
-/*
-const STUDENTS: Student[] = [
-    {
-        id: 1,
-        name: "Carlos",
-        classes: ["matematicas", "español", "biologia"],
-        grade: 11
-    },
-    {
-        id: 2,
-        name: "Leonardo",
-        classes: ["español", "historia", "quimica"],
-        grade: 10
-    },
-    {
-        id: 3,
-        name: "Alberto",
-        classes: ["biologia", "matematicas", "quimica"],
-        grade: 9
-    }
-];
-
-//Creation of teacher array
-const TEACHERS: Teacher[] = [
-    {
-        id: 1,
-        name: "Alejandro",
-        classrooms: ["1101","1001","901"],
-        grades: [11,10,9]
-    },
-    {
-        id: 2,
-        name: "Andres",
-        classrooms: ["1101","1001","1002"],
-        grades: [11,10]
-    },
-    {
-        id: 3,
-        name: "Fernando",
-        classrooms: ["901","901","903"],
-        grades: [9,10]
-    }
-];
-*/ 
 //# sourceMappingURL=app.component.js.map
