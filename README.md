@@ -5,6 +5,10 @@ En este repositorio se encuentran los laboratorios realizados en el Diplomado en
 ##Laboratorios
 Los laboratorios que se encuentran bajo este repositorio se encuentran organizados de la siguiente forma:
 
+###Modules/module-II/
+lab1 > Ejemplo de página usando skeleton y microformatos
+lab2 > Ejemplo de página con media queries y javascript
+
 
 
 
