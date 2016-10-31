@@ -13,4 +13,9 @@ Los laboratorios que se encuentran en el repositorio estan organizados de la sig
 - lab1: Conceptos básicos de javascript, variables, funciones, objetos, arreglos y comentarios.
 - lab2: Estructura base ionic2.
 - lab3: Creación de clases y herencia con Typescript.
-- lab4: Métodos accesores en clases (sin palabras reservadas) con Typescript.
+- lab4: Métodos accesores en clases (sin palabras reservadas get y set) con Typescript.
+- lab5: Interfaces con Typescript
+- lab6: Proyecto básico de Angular2
+- lab7: Proyecto Angular2 usando models, templates, binding, directivas y eventos
+- lab8: Proyecto Angular2 para calcular el costo de un viaje en taxi; uso de métodos en componente.
+- lab9: 
