@@ -6,8 +6,8 @@ En este repositorio se encuentran los laboratorios realizados en el Diplomado en
 Los laboratorios que se encuentran en el repositorio estan organizados de la siguiente forma:
 
 ###Modules/module-II/
-lab1 > Ejemplo de página usando skeleton y microformatos 
-lab2 > Ejemplo de página con media queries y javascript
+**lab1** > Ejemplo de página usando skeleton y microformatos
+**lab2** > Ejemplo de página con media queries y javascript
 
 ###Modules/module-III/
-lab1 > 
+**lab1** > Proyecto con los conceptos básicos de javascript, variables, funciones, objetos, arreglos y comentarios
