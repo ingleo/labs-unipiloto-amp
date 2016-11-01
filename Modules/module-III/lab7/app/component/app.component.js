@@ -37,11 +37,11 @@ var AppComponent = (function () {
         core_1.Component({
             selector: 'my-app',
             /*template: '<h1>{{product.id}}</h1><br />' +
-                      '<h2>{{product.name}}</h2><br />' +
-                      '<h2>{{product.description}}</h2><br />' +
-                      '<h2>{{product.type}}</h2><br />' +
-                      '<h2>{{product.price}}</h2><br />' +
-                      '<h2>{{product.quantity}}</h2><br />' +
+                          '<h2>{{product.name}}</h2><br />' +
+                          '<h2>{{product.description}}</h2><br />' +
+                          '<h2>{{product.type}}</h2><br />' +
+                          '<h2>{{product.price}}</h2><br />' +
+                          '<h2>{{product.quantity}}</h2><br />' +
                   '<br />' +
                   '<h2>{{user.name}}</h2><br />' +
                   '<h2>{{user.id}}</h2><br />' +
