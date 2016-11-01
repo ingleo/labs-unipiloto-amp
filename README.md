@@ -1,6 +1,6 @@
 ### Sinopsis 
 
-En este repositorio se encuentran los laboratorios realizados en el Diplomado en Desarrollo de Aplicaciones para Móviles V.5 de la Universidad piloto de Colombia.
+En este repositorio se encuentran los laboratorios realizados en el Diplomado en Desarrollo de Aplicaciones para Móviles V.5 de la Universidad Piloto de Colombia.
 
 ###Laboratorios
 Los laboratorios que se encuentran en el repositorio estan organizados de la siguiente forma:
