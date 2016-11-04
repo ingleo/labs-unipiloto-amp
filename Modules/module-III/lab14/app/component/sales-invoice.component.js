@@ -15,13 +15,14 @@ var SalesInvoiceComponent = (function () {
     function SalesInvoiceComponent(salesInvoiceService, route) {
         this.salesInvoiceService = salesInvoiceService;
         this.route = route;
+        this.title = "Sales Invoices";
     }
     SalesInvoiceComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.route.params.forEach(function (params) {
             var customerId = +params['customerId'];
             _this.salesInvoiceService.getSalesInvoicesByCustomerId(customerId)
-                .then(function (salesInvoices) { return _this.sales_invoice = salesInvoices; });
+                .then(function (salesInvoices) { return _this.salesInvoices = salesInvoices; });
         });
     };
     SalesInvoiceComponent = __decorate([

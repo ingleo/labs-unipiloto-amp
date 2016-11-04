@@ -1,4 +1,8 @@
-<div *ngIf="sales_invoice">
-   <label for=""> Name: </label>
-    <input type="text" [(ngModel)]="sales_invoice.id" placeholder="Id">
+<h5>{{title}}</h5>
+<div>
+    <ul>
+        <li *ngFor="let saleInvoice of salesInvoices">
+            <h5>#{{saleInvoice.id}}.</h5> Amount ${{saleInvoice.invoiceAmount}} - Tax ${{saleInvoice.tax}} 
+        </li>
+    </ul>
 </div>

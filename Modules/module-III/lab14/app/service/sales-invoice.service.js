@@ -17,15 +17,13 @@ var SalesInvoiceService = (function () {
         return Promise.resolve(sales_invoice_mock_1.SALES_INVOICES);
     };
     SalesInvoiceService.prototype.getSalesInvoicesByCustomerId = function (customerId) {
-        return this.getSalesInvoices().then(function (salesInvoices) { return salesInvoices.find(function (salesInvoice) { return salesInvoice.customerId === customerId; }); });
-    };
-    SalesInvoiceService.prototype.getSalesInvoicesByCustomId = function (customerId) {
-        if (typeof (customerId) === 'number') {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return this.getSalesInvoices().then(function (salesInvoices) {
+            return salesInvoices.filter(function (obj) {
+                if (obj.customerId === customerId) {
+                    return true;
+                }
+            });
+        });
     };
     SalesInvoiceService = __decorate([
         core_1.Injectable(), 

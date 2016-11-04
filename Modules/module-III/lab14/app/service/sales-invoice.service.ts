@@ -4,23 +4,19 @@ import { SalesInvoice } from '../model/sales-invoice';
 
 
 @Injectable()
-export class SalesInvoiceService{
+export class SalesInvoiceService {
 
-    getSalesInvoices(): Promise<SalesInvoice[]>{
+    getSalesInvoices(): Promise<SalesInvoice[]> {
         return Promise.resolve(SALES_INVOICES);
     }
 
-    getSalesInvoicesByCustomerId(customerId: number): Promise<SalesInvoice>{
-        return this.getSalesInvoices().then(salesInvoices => salesInvoices.find(salesInvoice => salesInvoice.customerId === customerId));
+    getSalesInvoicesByCustomerId(customerId: number): Promise<SalesInvoice[]> {
+        return this.getSalesInvoices().then(salesInvoices => {
+            return salesInvoices.filter(obj => {
+                if (obj.customerId === customerId) {
+                    return true;
+                }
+            });
+        });
     }
-
-    getSalesInvoicesByCustomId(customerId: number){
-        if(typeof(customerId) === 'number'){
-            return true;
-        }else{
-            return false;
-        }
-    }
-
-    
 }

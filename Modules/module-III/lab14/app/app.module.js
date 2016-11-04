@@ -16,6 +16,7 @@ var app_routing_module_1 = require("./routing/app-routing.module");
 var common_1 = require("@angular/common");
 var customer_list_component_1 = require("./component/customer-list.component");
 var sales_invoice_component_1 = require('./component/sales-invoice.component');
+var line_item_component_1 = require('./component/line-item.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -29,7 +30,8 @@ var AppModule = (function () {
             declarations: [
                 app_component_1.AppComponent,
                 customer_list_component_1.CustomerComponent,
-                sales_invoice_component_1.SalesInvoiceComponent
+                sales_invoice_component_1.SalesInvoiceComponent,
+                line_item_component_1.LineItemComponent
             ],
             providers: [
                 {

@@ -6,8 +6,9 @@ import { AppComponent } from './component/app.component';
 import { AppRoutingModule } from "./routing/app-routing.module";
 import { APP_BASE_HREF } from "@angular/common";
 
-import {CustomerComponent} from "./component/customer-list.component";
+import { CustomerComponent } from "./component/customer-list.component";
 import { SalesInvoiceComponent } from './component/sales-invoice.component';
+import { LineItemComponent } from './component/line-item.component';
 
 @NgModule({
     imports: [
@@ -18,7 +19,8 @@ import { SalesInvoiceComponent } from './component/sales-invoice.component';
     declarations: [
         AppComponent,
         CustomerComponent,
-        SalesInvoiceComponent
+        SalesInvoiceComponent,
+        LineItemComponent
     ],
     providers: [
         {

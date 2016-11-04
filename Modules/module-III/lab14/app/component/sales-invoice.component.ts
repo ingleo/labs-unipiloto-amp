@@ -10,7 +10,8 @@ import { ActivatedRoute, Params } from "@angular/router";
 })
 
 export class SalesInvoiceComponent implements OnInit {
-    sales_invoice: SalesInvoice;
+    salesInvoices: SalesInvoice[];
+    title: string = "Sales Invoices";
 
     constructor(private salesInvoiceService: SalesInvoiceService,
         private route: ActivatedRoute){}
@@ -19,7 +20,7 @@ export class SalesInvoiceComponent implements OnInit {
         this.route.params.forEach((params: Params) => {
             let customerId =+params['customerId'];
             this.salesInvoiceService.getSalesInvoicesByCustomerId(customerId)
-                .then(salesInvoices => this.sales_invoice = salesInvoices);
+                .then(salesInvoices => this.salesInvoices = salesInvoices);
         });
     }
 }
