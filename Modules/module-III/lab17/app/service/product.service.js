@@ -15,16 +15,16 @@ var Rx_1 = require('rxjs/Rx');
 var ProductService = (function () {
     function ProductService(http) {
         this.http = http;
-        this.productsURI = 'http://localhost:3000/api/products';
+        this.productsURI = 'http://138.68.0.83:7070/api/v1/product/';
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
     }
     ProductService.prototype.getProducts = function () {
-        return this.http.get(this.productsURI)
-            .map(function (response) { return response.json().data; })
+        return this.http.get(this.productsURI + 'list')
+            .map(function (response) { return response.json(); })
             .catch(this.handleError);
     };
     ProductService.prototype.update = function (product) {
-        var url = this.productsURI + "/" + product.id;
+        var url = this.productsURI + "update/" + product.id;
         return this.http
             .put(url, JSON.stringify(product), { headers: this.headers })
             .map(function () { return product; })
@@ -32,8 +32,8 @@ var ProductService = (function () {
     };
     ProductService.prototype.create = function (name) {
         return this.http
-            .post(this.productsURI, JSON.stringify({ name: name }), { headers: this.headers })
-            .map(function (res) { return res.json().data; })
+            .post(this.productsURI + 'create', JSON.stringify({ name: name }), { headers: this.headers })
+            .map(function (res) { return res.json(); })
             .catch(this.handleError);
     };
     ProductService.prototype.handleError = function (error) {

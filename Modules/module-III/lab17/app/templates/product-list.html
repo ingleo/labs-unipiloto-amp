@@ -1,7 +1,14 @@
 <h1>{{ title }}</h1>
 
 <div>
-    <label>Product name:</label> <input #productName />
+    <label>Name:</label> <input #productName />
+    <br/>
+    <label>Type:</label> <input #productType />
+    <br/>
+    <label>Quantity:</label> <input #productQuantity />
+    <br/>
+    <label>Price:</label> <input #productPrice />
+    <br/>
     <button (click)="add(productName.value); productName.value=''">
         Add
     </button>

@@ -14,9 +14,11 @@ var forms_1 = require('@angular/forms');
 var app_component_1 = require('./component/app.component');
 var product_detail_component_1 = require('./component/product-detail.component');
 var http_1 = require("@angular/http");
-var angular2_in_memory_web_api_1 = require("angular2-in-memory-web-api");
-var in_memory_product_service_1 = require("./mock/in-memory-product.service");
 var product_service_1 = require("./service/product.service");
+var product_list_component_1 = require('./component/product-list.component');
+var app_routing_module_1 = require("./routing/app-routing.module");
+var common_1 = require("@angular/common");
+1;
 var AppModule = (function () {
     function AppModule() {
     }
@@ -26,13 +28,17 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
                 http_1.HttpModule,
-                angular2_in_memory_web_api_1.InMemoryWebApiModule.forRoot(in_memory_product_service_1.InMemoryProductService)
+                app_routing_module_1.AppRoutingModule
             ],
             declarations: [
                 app_component_1.AppComponent,
-                product_detail_component_1.ProductDetailComponent
+                product_detail_component_1.ProductDetailComponent,
+                product_list_component_1.ProductComponent
             ],
-            providers: [product_service_1.ProductService],
+            providers: [product_service_1.ProductService,
+                {
+                    provide: common_1.APP_BASE_HREF, useValue: '/'
+                }],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

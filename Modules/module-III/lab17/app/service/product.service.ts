@@ -7,19 +7,20 @@ import {Observable} from 'rxjs/Rx';
 @Injectable()
 export class ProductService {
 
-    private productsURI = 'http://localhost:3000/api/products';
+    private productsURI = 'http://138.68.0.83:7070/api/v1/product/';
     private headers = new Headers({'Content-Type': 'application/json'});
 
     constructor(private http: Http) { }
 
     getProducts(): Observable<Product[]> {
-        return this.http.get(this.productsURI)
-            .map(response => response.json().data as Product[])
+        return this.http.get(this.productsURI+'list')
+        //cuando se usa in-memory-web-api se hace response.json().data  
+            .map(response => response.json() as Product[])
             .catch(this.handleError);
     }
 
     update(product: Product): Observable<Product> {
-        const url = `${this.productsURI}/${product.id}`;
+        const url = `${this.productsURI}update/${product.id}`;
         return this.http
             .put(url, JSON.stringify(product), {headers: this.headers})
             .map(() => product)
@@ -29,8 +30,8 @@ export class ProductService {
     create(name: string): Observable<Product> {
 
         return this.http
-            .post(this.productsURI, JSON.stringify({name: name}), {headers: this.headers})
-            .map(res => res.json().data)
+            .post(this.productsURI+'create', JSON.stringify({name: name}), {headers: this.headers})
+            .map(res => res.json())
             .catch(this.handleError);
     }
 
