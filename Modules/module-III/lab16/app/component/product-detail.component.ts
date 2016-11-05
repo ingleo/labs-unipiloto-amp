@@ -17,8 +17,11 @@ export class ProductDetailComponent {
 
     save(): void {
         this.productService.update(this.product)
-            .then((response) => console.log(response));
+            .subscribe(
+                response => {console.log(response)},
+                err => { console.log(err)});
     }
 }
+
 
 

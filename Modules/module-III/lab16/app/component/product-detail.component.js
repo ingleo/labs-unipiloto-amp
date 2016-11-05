@@ -17,7 +17,7 @@ var ProductDetailComponent = (function () {
     }
     ProductDetailComponent.prototype.save = function () {
         this.productService.update(this.product)
-            .then(function (response) { return console.log(response); });
+            .subscribe(function (response) { console.log(response); }, function (err) { console.log(err); });
     };
     __decorate([
         core_1.Input(), 

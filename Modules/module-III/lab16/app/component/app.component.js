@@ -17,7 +17,12 @@ var AppComponent = (function () {
     }
     AppComponent.prototype.getProducts = function () {
         var _this = this;
-        this.productService.getProducts().then(function (products) { return _this.products = products; });
+        this.productService.getProducts()
+            .subscribe(function (products) {
+            _this.products = products;
+        }, function (error) {
+            console.log(error);
+        });
     };
     AppComponent.prototype.ngOnInit = function () {
         this.getProducts();
@@ -32,7 +37,7 @@ var AppComponent = (function () {
             return;
         }
         this.productService.create(name)
-            .then(function (product) {
+            .subscribe(function (product) {
             _this.products.push(product);
             _this.selected = null;
         });
