@@ -26,5 +26,5 @@ Los laboratorios que se encuentran en el repositorio estan organizados de la sig
 - lab13: Proyecto Angular2 con uso de servicios y routing con envío de parámetros en la URL***.
 - lab14: Proyecto Angular2 con uso de servicios y routing con envío de parámetros en la URL(recorriendo array)***.
 - lab15: Proyecto Angular2 usando in-memory-web-api para simular el consumo de servicios via http y retornando objetos de tipo Promise***.
-- lab17: Proyecto Angular2 usando in-memory-web-api para simular el consumo de servicios via http y retornando objetos de tipo Observable***.
-
+- lab16: Proyecto Angular2 usando in-memory-web-api para simular el consumo de servicios via http y retornando objetos de tipo Observable***.
+- lab17: 
