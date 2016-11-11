@@ -18,7 +18,6 @@ var product_service_1 = require("./service/product.service");
 var product_list_component_1 = require('./component/product-list.component');
 var app_routing_module_1 = require("./routing/app-routing.module");
 var common_1 = require("@angular/common");
-1;
 var AppModule = (function () {
     function AppModule() {
     }

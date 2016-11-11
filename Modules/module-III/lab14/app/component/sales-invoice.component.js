@@ -31,10 +31,9 @@ var SalesInvoiceComponent = (function () {
             templateUrl: 'app/templates/sales-invoice.html',
             providers: [sales_invoice_service_1.SalesInvoiceService]
         }), 
-        __metadata('design:paramtypes', [sales_invoice_service_1.SalesInvoiceService, (typeof (_a = typeof router_1.ActivatedRoute !== 'undefined' && router_1.ActivatedRoute) === 'function' && _a) || Object])
+        __metadata('design:paramtypes', [sales_invoice_service_1.SalesInvoiceService, router_1.ActivatedRoute])
     ], SalesInvoiceComponent);
     return SalesInvoiceComponent;
-    var _a;
 }());
 exports.SalesInvoiceComponent = SalesInvoiceComponent;
 //# sourceMappingURL=sales-invoice.component.js.map

@@ -10,7 +10,7 @@ import { ProductService } from "./service/product.service";
 import { ProductComponent } from './component/product-list.component';
 import { AppRoutingModule } from "./routing/app-routing.module";
 import { APP_BASE_HREF } from "@angular/common";
-1
+
 
 @NgModule({
   imports: [

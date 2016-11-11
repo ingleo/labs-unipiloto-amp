@@ -32,10 +32,9 @@ var LineItemComponent = (function () {
             templateUrl: 'app/templates/line-item.html',
             providers: [line_item_service_1.LineItemService]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object, line_item_service_1.LineItemService])
+        __metadata('design:paramtypes', [router_1.Router, line_item_service_1.LineItemService])
     ], LineItemComponent);
     return LineItemComponent;
-    var _a;
 }());
 exports.LineItemComponent = LineItemComponent;
 //# sourceMappingURL=line-item.component.js.map

@@ -1,14 +1,14 @@
-import {Injectable} from "@angular/core";
-import {Product} from "../model/product";
-import {Http, Headers} from "@angular/http";
+import { Injectable } from "@angular/core";
+import { Product } from "../model/product";
+import { Http, Headers } from "@angular/http";
 import 'rxjs/add/operator/map';
-import {Observable} from 'rxjs/Rx';
+import { Observable } from 'rxjs/Rx';
 
 @Injectable()
 export class ProductService {
 
     private productsURI = 'http://localhost:3000/api/products';
-    private headers = new Headers({'Content-Type': 'application/json'});
+    private headers = new Headers({ 'Content-Type': 'application/json' });
 
     constructor(private http: Http) { }
 
@@ -21,7 +21,7 @@ export class ProductService {
     update(product: Product): Observable<Product> {
         const url = `${this.productsURI}/${product.id}`;
         return this.http
-            .put(url, JSON.stringify(product), {headers: this.headers})
+            .put(url, JSON.stringify(product), { headers: this.headers })
             .map(() => product)
             .catch(this.handleError);
     }
@@ -29,7 +29,7 @@ export class ProductService {
     create(name: string): Observable<Product> {
 
         return this.http
-            .post(this.productsURI, JSON.stringify({name: name}), {headers: this.headers})
+            .post(this.productsURI, JSON.stringify({ name: name }), { headers: this.headers })
             .map(res => res.json().data)
             .catch(this.handleError);
     }

@@ -39,10 +39,9 @@ var CustomerComponent = (function () {
             templateUrl: 'app/templates/customer-list.html',
             providers: [customer_service_1.CustomerService]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object, customer_service_1.CustomerService])
+        __metadata('design:paramtypes', [router_1.Router, customer_service_1.CustomerService])
     ], CustomerComponent);
     return CustomerComponent;
-    var _a;
 }());
 exports.CustomerComponent = CustomerComponent;
 //# sourceMappingURL=customer-list.component.js.map
