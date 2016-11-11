@@ -23,6 +23,13 @@ var UserService = (function () {
             .map(function (response) { return response.json(); })
             .catch(this.handleError);
     };
+    UserService.prototype.update = function (user) {
+        var url = this.usersURI + "update/" + user.id;
+        return this.http
+            .put(url, JSON.stringify(user), { headers: this.headers })
+            .map(function () { return user; })
+            .catch(this.handleError);
+    };
     UserService.prototype.create = function (user) {
         alert(user.email + user.password + user.firstname + user.lastname + user.phone);
         return this.http
