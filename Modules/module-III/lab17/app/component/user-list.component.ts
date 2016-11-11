@@ -11,15 +11,11 @@ export class UserComponent {
 
     title: string = "Add User";
     title2: string = "User List"
-    users: User[];
     newUser: User = { id: 0, email: "", password: "", firstname: "", lastname: "", phone: "" };
     selected: User;
+    users: User[];
 
     constructor(private userService: UserService) { }
-
-    ngOnInit(): void {
-        this.getUsers();
-    }
 
     getUsers() {
         this.userService.getUsers()
@@ -31,6 +27,10 @@ export class UserComponent {
                 console.log(error);
             }
             );
+    }
+
+    ngOnInit(): void {
+        this.getUsers();
     }
 
     add(newUser: User) {

@@ -17,9 +17,6 @@ var UserComponent = (function () {
         this.title2 = "User List";
         this.newUser = { id: 0, email: "", password: "", firstname: "", lastname: "", phone: "" };
     }
-    UserComponent.prototype.ngOnInit = function () {
-        this.getUsers();
-    };
     UserComponent.prototype.getUsers = function () {
         var _this = this;
         this.userService.getUsers()
@@ -28,6 +25,9 @@ var UserComponent = (function () {
         }, function (error) {
             console.log(error);
         });
+    };
+    UserComponent.prototype.ngOnInit = function () {
+        this.getUsers();
     };
     UserComponent.prototype.add = function (newUser) {
         var _this = this;
