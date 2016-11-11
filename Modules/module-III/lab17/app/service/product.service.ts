@@ -27,10 +27,19 @@ export class ProductService {
             .catch(this.handleError);
     }
 
-    create(name: string): Observable<Product> {
+    create(name: string, type: string, quantity: number, price: number): Observable<Product> {
+
+        alert('name: ' + name + 'type: ' + type + 'quantity: ' + quantity + 'price: ' + price);
 
         return this.http
-            .post(this.productsURI + 'create', JSON.stringify({ name: name }), { headers: this.headers })
+            .post(this.productsURI + 'create',
+            JSON.stringify({
+                name: name,
+                type: type,
+                quantity: quantity,
+                price: price
+            }),
+            { headers: this.headers })
             .map(res => res.json())
             .catch(this.handleError);
     }

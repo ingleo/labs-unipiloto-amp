@@ -18,6 +18,8 @@ var product_service_1 = require("./service/product.service");
 var product_list_component_1 = require('./component/product-list.component');
 var app_routing_module_1 = require("./routing/app-routing.module");
 var common_1 = require("@angular/common");
+var user_list_component_1 = require('./component/user-list.component');
+var user_service_1 = require('./service/user.service');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -32,9 +34,10 @@ var AppModule = (function () {
             declarations: [
                 app_component_1.AppComponent,
                 product_detail_component_1.ProductDetailComponent,
-                product_list_component_1.ProductComponent
+                product_list_component_1.ProductComponent,
+                user_list_component_1.UserComponent
             ],
-            providers: [product_service_1.ProductService,
+            providers: [product_service_1.ProductService, user_service_1.UserService,
                 {
                     provide: common_1.APP_BASE_HREF, useValue: '/'
                 }],

@@ -13,7 +13,8 @@ var product_service_1 = require("../service/product.service");
 var ProductComponent = (function () {
     function ProductComponent(productService) {
         this.productService = productService;
-        this.title = "los productos del Año";
+        this.title = "Add Product";
+        this.title2 = "Product List";
     }
     ProductComponent.prototype.getProducts = function () {
         var _this = this;
@@ -30,11 +31,21 @@ var ProductComponent = (function () {
     ProductComponent.prototype.onSelect = function (product) {
         this.selected = product;
     };
-    ProductComponent.prototype.add = function (product) {
+    ProductComponent.prototype.add = function (name, type, quantity, price) {
         var _this = this;
-        /*name = name.trim();
-        if (!name) { return; }*/
-        this.productService.create(name)
+        if (!name) {
+            return;
+        }
+        if (!type) {
+            return;
+        }
+        if (!quantity) {
+            return;
+        }
+        if (!price) {
+            return;
+        }
+        this.productService.create(name, type, quantity, price)
             .subscribe(function (product) {
             _this.products.push(product);
             _this.selected = null;
@@ -42,7 +53,7 @@ var ProductComponent = (function () {
     };
     ProductComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
+            selector: 'product-list-app',
             templateUrl: 'app/templates/product-list.html',
             providers: [product_service_1.ProductService]
         }), 

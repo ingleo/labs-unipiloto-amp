@@ -11,9 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var router_1 = require("@angular/router");
 var core_1 = require("@angular/core");
 var product_list_component_1 = require('../component/product-list.component');
+var user_list_component_1 = require('../component/user-list.component');
 var routes = [
     { path: '', redirectTo: '/product-list', pathMatch: 'full' },
-    { path: 'product-list', component: product_list_component_1.ProductComponent }
+    { path: 'product-list', component: product_list_component_1.ProductComponent },
+    { path: 'user-list', component: user_list_component_1.UserComponent }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {

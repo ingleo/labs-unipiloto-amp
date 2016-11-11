@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Product } from '../model/product';
-import {ProductService} from "../service/product.service";
+import { ProductService } from "../service/product.service";
 
 @Component({
     selector: 'product-detail',
@@ -11,15 +11,15 @@ export class ProductDetailComponent {
     @Input()
     product: Product;
 
-    constructor(private productService: ProductService){
+    title: string = "Product Detail";
 
-    }
+    constructor(private productService: ProductService) {}
 
     save(): void {
         this.productService.update(this.product)
             .subscribe(
-                response => {console.log(response)},
-                err => { console.log(err)});
+            response => { console.log(response) },
+            err => { console.log(err) });
     }
 }
 

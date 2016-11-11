@@ -8,49 +8,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var http_1 = require("@angular/http");
+var core_1 = require('@angular/core');
+var http_1 = require('@angular/http');
 require('rxjs/add/operator/map');
 var Rx_1 = require('rxjs/Rx');
-var ProductService = (function () {
-    function ProductService(http) {
+var UserService = (function () {
+    function UserService(http) {
         this.http = http;
-        this.productsURI = 'http://138.68.0.83:7070/api/v1/product/';
+        this.usersURI = 'http://138.68.0.83:7070/api/v1/user/';
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
     }
-    ProductService.prototype.getProducts = function () {
-        return this.http.get(this.productsURI + 'list')
+    UserService.prototype.getUsers = function () {
+        return this.http.get(this.usersURI + 'list')
             .map(function (response) { return response.json(); })
             .catch(this.handleError);
     };
-    ProductService.prototype.update = function (product) {
-        var url = this.productsURI + "update/" + product.id;
+    UserService.prototype.create = function (user) {
+        alert(user.email + user.password + user.firstname + user.lastname + user.phone);
         return this.http
-            .put(url, JSON.stringify(product), { headers: this.headers })
-            .map(function () { return product; })
-            .catch(this.handleError);
-    };
-    ProductService.prototype.create = function (name, type, quantity, price) {
-        alert('name: ' + name + 'type: ' + type + 'quantity: ' + quantity + 'price: ' + price);
-        return this.http
-            .post(this.productsURI + 'create', JSON.stringify({
-            name: name,
-            type: type,
-            quantity: quantity,
-            price: price
+            .post(this.usersURI + 'sign-up', JSON.stringify({
+            email: user.email,
+            password: user.password,
+            firstname: user.firstname,
+            lastname: user.lastname,
+            phone: user.phone
         }), { headers: this.headers })
-            .map(function (res) { return res.json(); })
+            .map(function (result) { return result.json; })
             .catch(this.handleError);
     };
-    ProductService.prototype.handleError = function (error) {
+    UserService.prototype.handleError = function (error) {
         console.error('An error occurred', error); // for demo purposes only
         return Rx_1.Observable.throw(error.message || error);
     };
-    ProductService = __decorate([
+    UserService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])
-    ], ProductService);
-    return ProductService;
+    ], UserService);
+    return UserService;
 }());
-exports.ProductService = ProductService;
-//# sourceMappingURL=product.service.js.map
+exports.UserService = UserService;
+//# sourceMappingURL=user.service.js.map

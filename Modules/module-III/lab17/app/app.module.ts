@@ -10,6 +10,8 @@ import { ProductService } from "./service/product.service";
 import { ProductComponent } from './component/product-list.component';
 import { AppRoutingModule } from "./routing/app-routing.module";
 import { APP_BASE_HREF } from "@angular/common";
+import { UserComponent } from './component/user-list.component';
+import { UserService } from './service/user.service';
 
 
 @NgModule({
@@ -22,9 +24,10 @@ import { APP_BASE_HREF } from "@angular/common";
   declarations: [
     AppComponent,
     ProductDetailComponent,
-    ProductComponent
+    ProductComponent,
+    UserComponent
   ],
-  providers: [ProductService,
+  providers: [ProductService,UserService,
     {
       provide: APP_BASE_HREF, useValue: '/'
     }],

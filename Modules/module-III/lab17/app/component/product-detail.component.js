@@ -14,6 +14,7 @@ var product_service_1 = require("../service/product.service");
 var ProductDetailComponent = (function () {
     function ProductDetailComponent(productService) {
         this.productService = productService;
+        this.title = "Product Detail";
     }
     ProductDetailComponent.prototype.save = function () {
         this.productService.update(this.product)

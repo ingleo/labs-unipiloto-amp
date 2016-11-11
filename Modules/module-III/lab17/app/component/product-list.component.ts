@@ -3,21 +3,20 @@ import { Product } from '../model/product';
 import { ProductService } from "../service/product.service";
 
 @Component({
-    selector: 'my-app',
+    selector: 'product-list-app',
     templateUrl: 'app/templates/product-list.html',
     providers: [ProductService]
 })
 
 export class ProductComponent {
 
-    title: string = "los productos del Año";
+    title: string = "Add Product";
+    title2: string = "Product List"
     selected: Product;
     products: Product[];
 
 
-    constructor(private productService: ProductService) {
-
-    }
+    constructor(private productService: ProductService) { }
 
     getProducts() {
         this.productService.getProducts()
@@ -25,11 +24,10 @@ export class ProductComponent {
             products => {
                 this.products = products;
             },
-
             error => {
                 console.log(error);
             }
-            );
+        );
     }
 
     ngOnInit(): void {
@@ -40,10 +38,14 @@ export class ProductComponent {
         this.selected = product;
     }
 
-    add(product: Product): void {
-        /*name = name.trim();
-        if (!name) { return; }*/
-        this.productService.create(name)
+
+    add(name: string, type: string, quantity: number, price: number) {
+        if (!name) { return; }
+        if (!type) { return; }
+        if (!quantity) { return; }
+        if (!price) { return; }
+
+        this.productService.create(name, type, quantity, price)
             .subscribe(product => {
                 this.products.push(product);
                 this.selected = null;

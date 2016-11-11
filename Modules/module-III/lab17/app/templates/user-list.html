@@ -1,0 +1,32 @@
+<h3>{{ title }}</h3>
+
+<div>
+	<label>Email:</label> 
+	<input type="text" [(ngModel)]="newUser.email" placeholder="email"/>
+	<br/>
+	<label>Password:</label> 
+	<input type="password" [(ngModel)]="newUser.password" placeholder="password"/>
+	<br/>
+	<label>Firstname:</label> 
+	<input type="text" [(ngModel)]="newUser.firstname" placeholder="first name"/>
+	<br/>
+	<label>LastName:</label> 
+	<input type="text" [(ngModel)]="newUser.lastname" placeholder="last name"/>
+	<br/>
+	<button (click)="add(newUser)">
+        Add
+    </button>
+</div>
+
+<hr/>
+<h3>{{title2}}</h3>
+
+<div>
+	<ul>
+		<li *ngFor="let user of users">
+			<span>{{user.id}}</span> {{user.email}}
+		</li>
+	</ul>
+</div>
+
+<hr />

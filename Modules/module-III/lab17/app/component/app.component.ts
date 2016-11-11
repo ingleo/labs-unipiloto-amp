@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-    title: string = "Creación de productos y usuarios";
+    title: string = "Products and Users creation";
 }

@@ -1,27 +1,26 @@
-<h1>{{ title }}</h1>
+<h3>{{ title }}</h3>
 
 <div>
-    <label>Name:</label> <input #productName />
-    <br/>
-    <label>Type:</label> <input #productType />
-    <br/>
-    <label>Quantity:</label> <input #productQuantity />
-    <br/>
-    <label>Price:</label> <input #productPrice />
-    <br/>
-    <button (click)="add(productName.value); productName.value=''">
+	<label>Name:</label> <input #productName />
+	<br/>
+	<label>Type:</label> <input #productType />
+	<br/>
+	<label>Quantity:</label> <input #productQuantity />
+	<br/>
+	<label>Price:</label> <input #productPrice />
+	<br/>
+	<button (click)="add(productName.value, productType.value, productQuantity.value, productPrice.value); productName.value=''">
         Add
     </button>
 </div>
 
 
 <hr />
+<h3>{{title2}}</h3>
 <ul>
-    <li *ngFor="let product of products"
-        [class.pepito]="product === selected"
-        (click)="onSelect(product)">
-        <span>{{product.id}}</span> {{product.name}}
-    </li>
+	<li *ngFor="let product of products" [class.pepito]="product === selected" (click)="onSelect(product)">
+		<span>{{product.id}}</span> {{product.name}}
+	</li>
 </ul>
 
 <product-detail [product]="selected"></product-detail>
