@@ -1,0 +1,12 @@
+<hr/>
+
+<div *ngIf="user">
+	<h3>{{title}}</h3>
+    <label>Firstname: </label><br/>
+	<input [(ngModel)]="user.firstname" placeholder="firstname"><br />
+    <label>Lastname: </label><br />
+	<input [(ngModel)]="user.lastname" placeholder="lastname"><br />
+    <label>Phone: </label><br />
+	<input [(ngModel)]="user.phone" placeholder="phone"><br />
+    <button (click)="save()">Save</button>
+</div>

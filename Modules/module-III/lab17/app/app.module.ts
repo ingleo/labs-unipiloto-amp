@@ -12,6 +12,7 @@ import { AppRoutingModule } from "./routing/app-routing.module";
 import { APP_BASE_HREF } from "@angular/common";
 import { UserComponent } from './component/user-list.component';
 import { UserService } from './service/user.service';
+import { UserDetailComponent } from './component/user-detail.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { UserService } from './service/user.service';
     AppComponent,
     ProductDetailComponent,
     ProductComponent,
-    UserComponent
+    UserComponent,
+    UserDetailComponent
   ],
   providers: [ProductService,UserService,
     {

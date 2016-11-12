@@ -20,7 +20,7 @@ export class UserService {
     }
 
     update(user: User): Observable<User> {
-        const url = `${this.usersURI}update/${user.id}`;
+        const url = `${this.usersURI}update/${user.email}`;
         return this.http
             .put(url, JSON.stringify(user), { headers: this.headers })
             .map(() => user)
@@ -28,8 +28,6 @@ export class UserService {
     }
 
     create(user: User): Observable<User> {
-
-        alert(user.email+user.password+user.firstname+user.lastname+user.phone);
         return this.http
             .post(this.usersURI + 'sign-up',
             JSON.stringify({
@@ -40,7 +38,7 @@ export class UserService {
                 phone: user.phone
             }),
             { headers: this.headers })
-            .map(result => result.json)
+            .map(result => result.json())
             .catch(this.handleError);
     }
 

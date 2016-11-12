@@ -24,14 +24,13 @@ var UserService = (function () {
             .catch(this.handleError);
     };
     UserService.prototype.update = function (user) {
-        var url = this.usersURI + "update/" + user.id;
+        var url = this.usersURI + "update/" + user.email;
         return this.http
             .put(url, JSON.stringify(user), { headers: this.headers })
             .map(function () { return user; })
             .catch(this.handleError);
     };
     UserService.prototype.create = function (user) {
-        alert(user.email + user.password + user.firstname + user.lastname + user.phone);
         return this.http
             .post(this.usersURI + 'sign-up', JSON.stringify({
             email: user.email,
@@ -40,7 +39,7 @@ var UserService = (function () {
             lastname: user.lastname,
             phone: user.phone
         }), { headers: this.headers })
-            .map(function (result) { return result.json; })
+            .map(function (result) { return result.json(); })
             .catch(this.handleError);
     };
     UserService.prototype.handleError = function (error) {

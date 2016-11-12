@@ -37,6 +37,9 @@ var UserComponent = (function () {
             _this.selected = null;
         });
     };
+    UserComponent.prototype.onSelect = function (user) {
+        this.selected = user;
+    };
     UserComponent = __decorate([
         core_1.Component({
             selector: 'user-list-app',

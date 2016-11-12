@@ -11,11 +11,14 @@ export class UserComponent {
 
     title: string = "Add User";
     title2: string = "User List"
-    newUser: User = { id: 0, email: "", password: "", firstname: "", lastname: "", phone: "" };
+    newUser: User;
     selected: User;
     users: User[];
 
-    constructor(private userService: UserService) { }
+    constructor(private userService: UserService) {
+
+        this.newUser = { id: 0, email: "", password: "", firstname: "", lastname: "", phone: "" };
+    }
 
     getUsers() {
         this.userService.getUsers()
@@ -42,4 +45,7 @@ export class UserComponent {
             });
     }
 
+    onSelect(user: User){
+        this.selected = user;
+    }
 }

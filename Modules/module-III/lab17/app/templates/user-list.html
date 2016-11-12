@@ -13,6 +13,9 @@
 	<label>LastName:</label> 
 	<input type="text" [(ngModel)]="newUser.lastname" placeholder="last name"/>
 	<br/>
+	<label>Phone:</label> 
+	<input type="text" [(ngModel)]="newUser.phone" placeholder="phone"/>
+	<br/>
 	<button (click)="add(newUser)">
         Add
     </button>
@@ -20,13 +23,12 @@
 
 <hr/>
 <h3>{{title2}}</h3>
-
 <div>
 	<ul>
-		<li *ngFor="let user of users">
+		<li *ngFor="let user of users" (click)="onSelect(user)"> 
 			<span>{{user.id}}</span> {{user.email}}
 		</li>
 	</ul>
 </div>
 
-<hr />
+<user-detail [user]="selected"></user-detail>
