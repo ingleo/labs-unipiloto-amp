@@ -15,24 +15,23 @@
 
 <ion-content padding>
 
-	<p>
-		<button ion-button color="light" (click)="goList()">Light</button>
-	</p>
+	<ion-list no-border>
 
-	<p>
-		<button ion-button (click)="loadInfo()">Default</button>
-	</p>
+		<ion-list-header>
+			Products
+		</ion-list-header>
 
-	<p>
-		<button ion-button color="secondary">Secondary</button>
-	</p>
+		<ion-item *ngFor="let product of products" (click)="goToDetail(product)">
+			<ion-icon name='logo-dropbox' item-left></ion-icon>
+			<ion-label>
+				{{product.id}}
+			</ion-label>
+			<ion-label>
+				{{product.name}}
+			</ion-label>
+			<ion-icon name='arrow-forward' item-right></ion-icon>
+		</ion-item>
 
-	<p>
-		<button ion-button color="danger" block round>Danger</button>
-	</p>
-
-	<p>
-		<button ion-button color="dark">Dark</button>
-	</p>
+	</ion-list>
 
 </ion-content>
