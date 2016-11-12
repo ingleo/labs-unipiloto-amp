@@ -23,7 +23,7 @@
 
 <hr/>
 <h3>{{title2}}</h3>
-<div>
+<div style="overflow:auto; height:400px;">
 	<ul>
 		<li *ngFor="let user of users" (click)="onSelect(user)"> 
 			<span>{{user.id}}</span> {{user.email}}

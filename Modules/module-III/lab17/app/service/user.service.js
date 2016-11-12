@@ -32,13 +32,13 @@ var UserService = (function () {
     };
     UserService.prototype.create = function (user) {
         return this.http
-            .post(this.usersURI + 'sign-up', JSON.stringify({
-            email: user.email,
-            password: user.password,
-            firstname: user.firstname,
-            lastname: user.lastname,
-            phone: user.phone
-        }), { headers: this.headers })
+            .post(this.usersURI + 'sign-up', JSON.stringify(user), { headers: this.headers })
+            .map(function (result) { return result.json(); })
+            .catch(this.handleError);
+    };
+    UserService.prototype.delete = function (userEmail) {
+        var url = this.usersURI + "delete/" + userEmail;
+        return this.http.delete(url, { headers: this.headers })
             .map(function (result) { return result.json(); })
             .catch(this.handleError);
     };

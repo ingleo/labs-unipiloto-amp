@@ -30,16 +30,17 @@ export class UserService {
     create(user: User): Observable<User> {
         return this.http
             .post(this.usersURI + 'sign-up',
-            JSON.stringify({
-                email: user.email,
-                password: user.password,
-                firstname: user.firstname,
-                lastname: user.lastname,
-                phone: user.phone
-            }),
+            JSON.stringify(user),
             { headers: this.headers })
             .map(result => result.json())
             .catch(this.handleError);
+    }
+
+    delete(userEmail: number): Observable<User> {
+        const url = `${this.usersURI}delete/${userEmail}`;
+        return this.http.delete(url, { headers: this.headers })
+        .map(result => result.json())
+        .catch(this.handleError)
     }
 
     private handleError(error: any): Observable<any> {
