@@ -28,14 +28,14 @@
     "@ionic/app-scripts": "0.0.43",
     "typescript": "2.0.6"
   },
-  "description": "lab5: An Ionic project",
   "cordovaPlugins": [
-    "cordova-plugin-device",
-    "cordova-plugin-console",
     "cordova-plugin-whitelist",
-    "cordova-plugin-splashscreen",
+    "cordova-plugin-console",
     "cordova-plugin-statusbar",
-    "ionic-plugin-keyboard"
+    "cordova-plugin-device",
+    "ionic-plugin-keyboard",
+    "cordova-plugin-splashscreen"
   ],
-  "cordovaPlatforms": []
+  "cordovaPlatforms": [],
+  "description": "lab6: An Ionic project"
 }
