@@ -24,7 +24,7 @@ export class UserService {
         return this.http
             .put(url, JSON.stringify(user), { headers: this.headers })
             .map(() => user)
-            .catch(this.handleError); 
+            .catch(this.handleError);
     }
 
     create(user: User): Observable<User> {
@@ -39,8 +39,8 @@ export class UserService {
     delete(userEmail: number): Observable<User> {
         const url = `${this.usersURI}delete/${userEmail}`;
         return this.http.delete(url, { headers: this.headers })
-        .map(result => result.json())
-        .catch(this.handleError)
+            .map(result => result.json())
+            .catch(this.handleError)
     }
 
     private handleError(error: any): Observable<any> {
