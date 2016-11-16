@@ -20,10 +20,17 @@ export class ProductService {
     console.log('Hello ProductService Provider');
   }
 
-  getProducts() {
+  getProducts(): Observable<Product[]> {
     return this.http.get(this.productsURI + 'list')
       //cuando se usa in-memory-web-api se hace response.json().data  
       .map(response => response.json() as Product[])
+      .catch(this.handleError);
+  }
+
+  getProductDetail(productId: number): Observable<Product> {
+    const url = `${this.productsURI}detail/${productId}`;
+    return this.http.get(url, { headers: this.headers })
+      .map(response => response.json() as Product)
       .catch(this.handleError);
   }
 

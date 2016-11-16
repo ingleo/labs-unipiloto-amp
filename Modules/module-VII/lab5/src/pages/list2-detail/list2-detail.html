@@ -6,13 +6,34 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>list2Detail</ion-title>
-  </ion-navbar>
+	<ion-navbar>
+		<ion-title>Product Detail</ion-title>
+	</ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+    <ion-list>
+      <ion-item>
+        <ion-icon name='apps' item-left></ion-icon>
+        <ion-label>Id: {{product?.id}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name='archive' item-left color="secondary"></ion-icon>
+        <ion-label>Name: {{product?.name}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name='code' item-left color="danger"></ion-icon>
+        <ion-label>Type: {{product?.type}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name='filing' item-left ></ion-icon>
+        <ion-label>Quantity: {{product?.quantity}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name='cash' item-left color="secondary"></ion-icon>
+        <ion-label>Price: {{product?.price}}</ion-label>
+      </ion-item>
+    </ion-list>
 </ion-content>
