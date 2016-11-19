@@ -16,7 +16,7 @@ import { ProductService } from '../../providers/product-service';
 })
 export class List2DetailPage {
 
-  product: Product;
+  product: Product = {id:0,name:"",type:"",price:0,quantity:0};
   idProduct: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private productService: ProductService) {
@@ -28,7 +28,7 @@ export class List2DetailPage {
   ionViewDidLoad() {
     console.log('Hello List2DetailPage Page');
     this.idProduct = this.navParams.get("id");
-    alert(this.idProduct);
+    //alert(this.idProduct);
     this.getProductDetail(this.idProduct);
   }
 
