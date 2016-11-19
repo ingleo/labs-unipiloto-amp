@@ -7,7 +7,6 @@ import { List2Page } from '../pages/list2/list2';
 import { ProductService } from '../providers/product-service';
 import { List2DetailPage } from '../pages/list2-detail/list2-detail';
 import { StorageService } from '../providers/storage-service';
-import { Storage } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -28,6 +27,6 @@ import { Storage } from '@ionic/storage';
     List2Page,
     List2DetailPage
   ],
-  providers: [ProductService, Storage, StorageService]
+  providers: [ProductService, StorageService]
 })
 export class AppModule { }

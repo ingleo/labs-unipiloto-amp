@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { Product } from '../../model/product';
 import { ProductService } from '../../providers/product-service';
+import { StorageService } from '../../providers/storage-service';
 
 /*
   Generated class for the List2Detail page.
@@ -19,7 +20,7 @@ export class List2DetailPage {
   product: Product = {id:0,name:"",type:"",price:0,quantity:0};
   idProduct: number;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private productService: ProductService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private productService: ProductService, private storageService: StorageService) {
 
     console.log('Constructor!!!');
 
@@ -27,9 +28,11 @@ export class List2DetailPage {
 
   ionViewDidLoad() {
     console.log('Hello List2DetailPage Page');
-    this.idProduct = this.navParams.get("id");
+    
+    this.idProduct = this.storageService.getItemToStorage('idkey');
+    //this.idProduct = this.navParams.get("id");
     //alert(this.idProduct);
-    this.getProductDetail(this.idProduct);
+    this.getProductDetail(Number(this.idProduct));
   }
 
   getProductDetail(idProduct: number) {

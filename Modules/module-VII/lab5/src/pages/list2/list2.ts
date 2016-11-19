@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 import { ProductService } from '../../providers/product-service';
 import { Product } from '../../model/product';
 import { List2DetailPage } from '../list2-detail/list2-detail';
-import { Storage } from '@ionic/storage';
+import { StorageService } from '../../providers/storage-service';
 
 /*
   Generated class for the List2 page.
@@ -19,14 +19,13 @@ import { Storage } from '@ionic/storage';
 export class List2Page {
 
   products: Product[];
+  finalName: string = "";
 
-  constructor(public navCtrl: NavController, private productService: ProductService, public storage: Storage) { }
+  constructor(public navCtrl: NavController, private productService: ProductService, private storageService: StorageService) { }
 
   ionViewDidLoad() {
     console.log('Hello List2Page Page');
     this.getProducts();
-    this.setItem();
-    this.getItem();
   }
 
   getProducts() {
@@ -41,16 +40,9 @@ export class List2Page {
       );
   }
 
-  setItem() {
-    this.storage.set('name', 'John').then(() => {
-      console.log('Name has been set');
-    });
-  }
-
-  getItem() {
-    this.storage.get('name').then((name) => {
-      console.log('Name: ' + name);
-    });
+  goToDetail(product) {
+    this.storageService.setItemToStorage('idkey', product.id);
+    this.navCtrl.push(List2DetailPage);
   }
 
 }
