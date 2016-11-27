@@ -37,5 +37,9 @@ Los laboratorios que se encuentran en el repositorio estan organizados de la sig
 - lab2: Proyecto Ionic 2 con template sidemenu
 - lab3: Proyecto Ionic 2 con template tabs
 - lab4: Proyecto Ionic 2 con llamado a modelo(clase)
-- lab5: Proyecto Ionic 2 con navegación básica, botónes y llamado de servicio REST***.
+- lab5: Proyecto Ionic 2 con navegación básica, botónes y llamado de servicios REST usando localStorage (versión ionic-app-scripts 0.0.43)***.
+- lab6: Proyecto Ionic 2 con navegación básica, botónes y llamado de servicios REST usando NavParams (versión ionic-app-scripts 0.0.45)***.
+- lab7: Proyecto Ionic 2 combinando patrones de navegación Navigator y Sidemenu, haciendo llamado a servicios REST ***.
+- lab8: Proyecto Ionic 2 con formularios y validación***.
+- lab9: Proyecto Ionic 2 usando componentes ActionSheet, Modal, Alert, Loading, Scroll***.
 
