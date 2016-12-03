@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, Platform } from 'ionic-angular';
+import { Network } from 'ionic-native';
+import { Storage } from '@ionic/storage';
 
 /*
   Generated class for the NetworkInfo page.
@@ -13,10 +15,16 @@ import { NavController } from 'ionic-angular';
 })
 export class NetworkInfoPage {
 
-  constructor(public navCtrl: NavController) {}
+  public network: string;
 
-  ionViewDidLoad() {
-    console.log('Hello NetworkInfoPage Page');
+  constructor(public storage: Storage, public navCtrl: NavController) {
+
   }
 
+   ngOnInit() {
+ 
+      this.storage.get('net').then(res => {
+        this.network = res;
+      })
+  }
 }

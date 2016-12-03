@@ -17,6 +17,7 @@ export class HomePage {
   ngOnInit() {
     Network.onConnect().subscribe(() => {
       this.network = Network.connection;
+      alert(this.network);
       setTimeout(() => {
         if (Network.connection === 'wifi') {
           console.log(Network.connection);
